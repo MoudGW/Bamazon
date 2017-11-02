@@ -18,8 +18,8 @@ Add New Product
 
 bamazonSupervisor.js: Running this application will list a set of menu options:
 
-View Product Sales by Department
-Create New Department
+* View Product Sales by Department
+* Create New Department
 
 
 https://youtu.be/iEBszJ2nW0s
