@@ -35,16 +35,17 @@ function one(){
 	message:'Enter the ID of the product you like to buy :'},
     {name:'quantity',
 	message:'Enter the quantity of the product you like to buy :'}]).then(function (answers) {
-     con.query("select stock_quantity,Price from products where item_id="+answers.ID, function (err, result) {
+     con.query("select stock_quantity,Price,department_name from products where item_id="+answers.ID, function (err, result) {
     if (err) throw err;
+       var product_sales=parseInt(answers.quantity)*result[0].Price;
        var x=parseInt(result[0].stock_quantity)-parseInt(answers.quantity);
        if(x<0)
        {
        	console.log('Insufficient quantity!');
        }
        else{
-         con.query( "UPDATE products SET stock_quantity="+x+" WHERE item_id="+answers.ID);
-         console.log('your Total invoice is :'+parseInt(answers.quantity)*result[0].Price+"$"+"\nThank you for your Purchase");
+         con.query( "UPDATE products SET stock_quantity="+x+","+"product_sales="+product_sales+" WHERE item_id="+answers.ID);
+         console.log('your Total invoice is :'+product_sales+"$"+"\nThank you for your Purchase");
        }
   });
 

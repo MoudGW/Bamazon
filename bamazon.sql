@@ -15,3 +15,11 @@ values
 ('smartwater','bevarage',4.99,10000),('kraft','food',9.99,4000),
 ('Oil','Auto',99.99,50600),('Tiers','Auto',99.99,0),
 ('headphones','technologie',39.99,10440),('coca-cola','bevarage',2.99,100000);
+ALTER TABLE products 
+ADD  product_sales int null;
+Create table departments(
+department_id int not null AUTO_INCREMENT,
+department_name varchar(30) not null,
+over_head_costs int null,
+primary key (department_id)
+);
