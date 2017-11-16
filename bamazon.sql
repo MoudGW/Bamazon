@@ -1,12 +1,11 @@
-Create database bamazon;
  Use bamazon;
-Create table products(
-item_id int not null AUTO_INCREMENT,
-product_name varchar(30) not null,
+ ALTER TABLE products
+ADD  product_sales int null;
+Create table departments(
+department_id int not null AUTO_INCREMENT,
 department_name varchar(30) not null,
-Price double not null,
-stock_quantity int null,
-primary key (item_id)
+over_head_costs int null,
+primary key (department_id)
 );
 INSERT INTO products (product_name,department_name,Price,stock_quantity)
 values
@@ -15,11 +14,3 @@ values
 ('smartwater','bevarage',4.99,10000),('kraft','food',9.99,4000),
 ('Oil','Auto',99.99,50600),('Tiers','Auto',99.99,0),
 ('headphones','technologie',39.99,10440),('coca-cola','bevarage',2.99,100000);
-ALTER TABLE products 
-ADD  product_sales int null;
-Create table departments(
-department_id int not null AUTO_INCREMENT,
-department_name varchar(30) not null,
-over_head_costs int null,
-primary key (department_id)
-);
