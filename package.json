@@ -1,7 +1,25 @@
 {
-	"dependencies": {
-		"cli-table": "^0.3.1",
-		"inquirer": "^3.3.0",
-		"mysql": "^2.15.0"
-	}
+  "dependencies": {
+    "cli-table": "^0.3.1",
+    "inquirer": "^3.3.0",
+    "mysql": "^2.15.0"
+  },
+  "name": "bamazon",
+  "description": "bamazonCustomer.js: Running this application will first display all of the items available for sale. Include the ids, names, and prices of products for sale. The app should then prompt users with two messages:",
+  "version": "1.0.0",
+  "main": "bamazonCustomer.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MoudGW/Bamazon.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MoudGW/Bamazon/issues"
+  },
+  "homepage": "https://github.com/MoudGW/Bamazon#readme"
 }
